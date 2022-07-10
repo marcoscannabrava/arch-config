@@ -83,7 +83,7 @@
 
 - name: install aur packages
   become: no
-  aur:
+  kewlfft.aur.aur:
     skip_installed: true
     name:
       - adapta-gtk-theme #https://github.com/Alexays/Waybar/issues/515
