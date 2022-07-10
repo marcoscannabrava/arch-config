@@ -29,11 +29,11 @@
     update_cache: yes
     upgrade: yes
 
-- name: Configure reflector
-  copy:
-    src: reflector.conf
-    dest: /etc/xdg/reflector/
-  notify: enable reflector
+# - name: Configure reflector
+#   copy:
+#     src: reflector.conf
+#     dest: /etc/xdg/reflector/
+#   notify: enable reflector
 
 - name: Install pacman hooks
   pacman:

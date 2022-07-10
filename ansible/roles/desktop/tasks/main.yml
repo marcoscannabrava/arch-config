@@ -22,11 +22,10 @@
     name:
       - mesa
       - mesa-demos
-      - lib32-virtualgl
-      - vulkan-intel
-      - lib32-vulkan-intel
-      - intel-media-driver
-      - libva-utils
+      # - vulkan-intel
+      # - lib32-vulkan-intel
+      # - intel-media-driver
+      # - libva-utils
     state: present
 
 - name: install audio packages
@@ -70,7 +69,6 @@
       - gnome-themes-extra # gtk themes
       - youtube-dl
       - gopass # password manager
-      - zoom
     state: present
 
 - name: add missing gpg keys for aur
@@ -84,7 +82,7 @@
 - name: install aur packages
   become: no
   kewlfft.aur.aur:
-    skip_installed: true
+    state: present
     name:
       - adapta-gtk-theme #https://github.com/Alexays/Waybar/issues/515
       - equilux-theme 

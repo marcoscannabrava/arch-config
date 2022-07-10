@@ -2,7 +2,7 @@
 - name: install aur packages
   become: no
   kewlfft.aur.aur:
-    skip_installed: true
+    state: present
     name:
       - ttf-impallari-cabin-font # cv font
       - glow # render markdown cli
@@ -33,7 +33,7 @@
       # System
       - htop               # system monitor
       - net-tools          # netstat
-      - reflector          # mirror sorter
+      #  - reflector          # mirror sorter
       - fwupd              # dell firmware updater
       - nmap               # port scanner
       - tcpdump            # packet analyzer
@@ -62,7 +62,7 @@
       - neofetch           #
       - unzip              # uncompress zip
       - cifs-utils         #
-      - shellcheck         # sh linter
+      # - shellcheck         # sh linter
       - oath-toolkit       # otp tool
       - python-pip         # python3 package manager
       - dmidecode          # dump dmi table content
