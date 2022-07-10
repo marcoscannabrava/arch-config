@@ -21,31 +21,9 @@
     skip_installed: true
     name:
       - kompose-bin     # docker-compose to manifest convertor
-      - k3s-bin         # Lightweight Kubernetes in a signle binary 
+      - k3s-bin         # Lightweight Kubernetes in a single binary 
       - stern           # tail multiple pods on Kubernetes
       - kubespy         # observe Kubernetes resources in real time
-
-- name: install pip3 containers packages
-  pip:
-    name:
-      - podman-compose  # mutli-container podman apps
-
-- name: copy subuid files for podman rootless
-  template:
-    src: subuid.j2
-    dest: /etc/subuid
-
-- name: copy subgid files for podman rootless
-  template:
-    src: subgid.j2
-    dest: /etc/subgid
-
-- name: disable zfs overlay storage not supported by podman
-  lineinfile:
-    path: /etc/containers/storage.conf
-    regexp: 'mount_program = "/usr/bin/fuse-overlayfs"'
-    line: 'mount_program = "/usr/bin/fuse-overlayfs"'
-    state: present
 
 - name: Add user to docker group
   user:

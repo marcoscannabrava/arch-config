@@ -50,12 +50,9 @@
       - gnome-keyring # evolution gnome keyring
       - seahorse # keyring manager
       - firefox
-      - firefox-i18n-fr
-      - flatpak # package manager
       - gimp # img editor
       - kolourpaint # img editor
       - shotwell # photo manager
-      - libreoffice-still-fr # libreoffice suite fr
       - lollypop # music player
       - lxappearance # theme manager
       - mpv # video player
@@ -63,8 +60,6 @@
       - tumbler # thumbnailer
       - openvpn
       - playerctl # music player cli controller
-      - rdesktop # remote desktop client
-      - steam # games manager
       - transmission-gtk # torrent downloader
       - texlive-bin # latex
       - texlive-core # latex
@@ -73,9 +68,9 @@
       - variety # random backgrounds
       - papirus-icon-theme # icon theme
       - gnome-themes-extra # gtk themes
-      - x2goclient 
       - youtube-dl
       - gopass # password manager
+      - zoom
     state: present
 
 - name: add missing gpg keys for aur
@@ -99,14 +94,11 @@
       - swaylock-fancy-git # locker for wayland
       - wob # bars for wayland
       - connman-gtk # connman gtk gui
-      #- gnome-ssh-askpass2 # ssh askpass gui
       - google-chrome
       - adb-sync-git # android dir sync
       - downgrade # package downgrader
       - lf # cli file manager
-      - molotov # french tv wrapper
       - otf-font-awesome
-      #- ttf-impallari-cabin-font # xelatex cv
       - pastel # color viewer
       - tiny-irc-client-git
       - starleaf-breeze

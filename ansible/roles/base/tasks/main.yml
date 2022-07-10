@@ -19,14 +19,13 @@
       - starship           # cross-shell prompt
       - git                #
       - exa                # powerful ls
-      - bc                 # maths
       - jq                 # json processor
       - most               # colorized pager
       - bat                # colorized cat
       - neovim             # futur of vim
       - tree               #
-      - vi                 #
-      - man                #
+      # - vi                 #
+      # - man                #
       - screen             # terminal multiplexer
       - asciinema          # term recorder
       - expect             # automation tool
@@ -53,17 +52,11 @@
       - openbsd-netcat     # network utility
       - speedtest-cli      # 
       # Utils
-      - cronie             # Scheduler
-      - at                 # Scheduler
       - borgbackup         # backup utility
       - borgmatic          # backup utility automation
       - lsd                # improved ls command
       - rsync              # sync tool
       - rclone             # sync tool
-      - syncthing          # sync tool
-      - vdirsyncer         # sync tool
-      - khal               # cli calendar manager
-      - khard              # cli contacts manager
       - words              # dictionnaries
       - fzf                # fuzzy finder
       - neofetch           #
@@ -74,7 +67,6 @@
       - python-pip         # python3 package manager
       - dmidecode          # dump dmi table content
       - python-pre-commit  # pre-commit hook manager
-      - zim                # wiki app
     state: present
 
 - name: Configure root
