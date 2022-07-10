@@ -69,15 +69,8 @@
       - gnome-themes-extra # gtk themes
       - youtube-dl
       - gopass # password manager
+      - wf-recorder # screen recorder for wayland
     state: present
-
-- name: add missing gpg keys for aur
-  become: no
-  shell: gpg --recv --keyserver keyserver.ubuntu.com '{{item}}'
-  loop:
-    - F4B432D5D67990E3 # wob
-
-  changed_when: false
 
 - name: install aur packages
   become: no
@@ -86,19 +79,8 @@
     name:
       - adapta-gtk-theme #https://github.com/Alexays/Waybar/issues/515
       - equilux-theme 
-      - wdisplays-git # arandr for wayland
-      - wf-recorder-git # screen recorder for wayland
-      - grimshot-git # grim+slurp wrapper
       - swaylock-fancy-git # locker for wayland
-      - wob # bars for wayland
-      - connman-gtk # connman gtk gui
-      - google-chrome
-      - adb-sync-git # android dir sync
-      - downgrade # package downgrader
+      - chromium
       - lf # cli file manager
-      - otf-font-awesome
-      - pastel # color viewer
-      - tiny-irc-client-git
-      - starleaf-breeze
+      - otf-font-awesome-5
       - swappy # screenshot editor
-      - senpai # irc client for soju

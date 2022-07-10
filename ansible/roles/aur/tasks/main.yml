@@ -5,9 +5,9 @@
     path: /etc/sudoers
     line: '{{user}} ALL=(ALL) NOPASSWD: /usr/bin/pacman'
 
- - name: install AUR helper
-   become: no
-   kewlfft.aur.aur:
-     name: trizen
-     use: makepkg
-     state: present
+- name: install AUR helper
+  become: no
+  kewlfft.aur.aur:
+    name: trizen
+    use: makepkg
+    state: present

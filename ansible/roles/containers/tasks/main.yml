@@ -1,5 +1,6 @@
 ---
 - name: install containers packages
+  become: yes # TODO: workaround - should be avoided
   pacman:
     name:
       - docker          # high level container runtime

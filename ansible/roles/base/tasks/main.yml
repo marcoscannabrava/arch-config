@@ -4,9 +4,7 @@
   kewlfft.aur.aur:
     state: present
     name:
-      - ttf-impallari-cabin-font # cv font
       - glow # render markdown cli
-      - zrepl # zfs snapshot manager
 
 - name: install base packages
   pacman:
